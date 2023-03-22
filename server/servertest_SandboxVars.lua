@@ -614,4 +614,32 @@ SandboxVars = {
         -- How close members of a group stay to the group's leader. Minimum=1 Maximum=10 Default=3
         RallyGroupRadius = 6,
     },
+    SkillRecoveryJournal = {
+        -- The amount of experienced recovered from reading bound journals. Minimum=1 Maximum=100 Default=100
+        RecoveryPercentage = 100,
+        -- A multiplier on the speed of transcribing journals. Minimum=0.00 Maximum=1000.00 Default=1.00
+        TranscribeSpeed = 1.0,
+        -- A multiplier on the speed of reading bound journals. Minimum=0.00 Maximum=1000.00 Default=1.00
+        ReadTimeSpeed = 1.0,
+        -- Starting with more than 1 point in a skill generally nets you bonus XP - with this toggled off that XP is not recorded. All XP recorded is that of a character with no starting skills. This does NOT recover starting levels - only the bonus XP earned.
+        RecoverProfessionAndTraitsBonuses = true,
+        -- Toggling this on will allow people to transcribe XP earned from watching TV/VHS. Note: This means players can carry over watched XP between characters cumulatively.
+        TranscribeTVXP = true,
+        -- Toggle on to record passive skills.
+        RecoverPassiveSkills = true,
+        -- Toggle on to record combat skills.
+        RecoverCombatSkills = true,
+        -- Toggle on to record firearm skills.
+        RecoverFirearmSkills = true,
+        -- Toggle on to record crafting skills.
+        RecoverCraftingSkills = true,
+        -- Toggle on to record survivalist skills.
+        RecoverSurvivalistSkills = true,
+        -- Toggle on to record agility skills.
+        RecoverAgilitySkills = true,
+        -- Toggle off to prevent journals from recovering/transcribing recipes.
+        RecoverRecipes = true,
+        -- Normally you can reread the journal as many times as you like - with this toggled on each individual XP point can only be recovered once. You can still add onto the journal, but each point can only be recovered once on each journal. Note: the tooltip for the journal will now display a fraction for unused points.
+        RecoveryJournalUsed = true,
+    },
 }
