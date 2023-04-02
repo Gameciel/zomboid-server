@@ -370,7 +370,7 @@ SandboxVars = {
     -- Enable or disable broken limbs when survivors receive injuries from impacts, zombie damage and falls.
     BoneFracture = true,
     -- How long before zombie bodies disappear. Minimum=-1.00 Maximum=2147483647.00 Default=216.00
-    HoursForCorpseRemoval = 120.0,
+    HoursForCorpseRemoval = 48.0,
     -- Governs impact that nearby decaying bodies has on the player's health and emotions. Default=Normal
     -- 1 = None
     -- 2 = Low
@@ -468,7 +468,7 @@ SandboxVars = {
     -- 4 = High
     DamageToPlayerFromHitByACar = 1,
     -- Enable or disable traffic jams that spawn on the main roads of the map.
-    TrafficJam = true,
+    TrafficJam = false,
     -- How frequently cars will be discovered with an alarm. Default=Extremely Rare
     -- 1 = Never
     -- 2 = Extremely Rare
@@ -500,7 +500,7 @@ SandboxVars = {
     Map = {
         AllowMiniMap = true,
         AllowWorldMap = true,
-        MapAllKnown = false,
+        MapAllKnown = true,
     },
     ZombieLore = {
         -- Controls the zombie movement rate. Default=Fast Shamblers
@@ -598,21 +598,21 @@ SandboxVars = {
         -- The number of hours that must pass before zombies may respawn in a cell. If zero, spawning is disabled. Minimum=0.00 Maximum=8760.00 Default=72.00
         RespawnHours = 0,
         -- The number of hours that a chunk must be unseen before zombies may respawn in it. Minimum=0.00 Maximum=8760.00 Default=16.00
-        RespawnUnseenHours = 24.0,
+        RespawnUnseenHours = 0,
         -- The fraction of a cell's desired population that may respawn every RespawnHours. Minimum=0.00 Maximum=1.00 Default=0.10
-        RespawnMultiplier = 0.2,
+        RespawnMultiplier = 0,
         -- The number of hours that must pass before zombies migrate to empty parts of the same cell. If zero, migration is disabled. Minimum=0.00 Maximum=8760.00 Default=12.00
-        RedistributeHours = 6.0,
+        RedistributeHours = 24.0,
         -- The distance a zombie will try to walk towards the last sound it heard. Minimum=10 Maximum=1000 Default=100
         FollowSoundDistance = 100,
         -- The size of groups real zombies form when idle. Zero means zombies don't form groups. Groups don't form inside buildings or forest zones. Minimum=0 Maximum=1000 Default=20
-        RallyGroupSize = 15,
+        RallyGroupSize = 20,
         -- The distance real zombies travel to form groups when idle. Minimum=5 Maximum=50 Default=20
-        RallyTravelDistance = 20,
+        RallyTravelDistance = 25,
         -- The distance between zombie groups. Minimum=5 Maximum=25 Default=15
-        RallyGroupSeparation = 15,
+        RallyGroupSeparation = 25,
         -- How close members of a group stay to the group's leader. Minimum=1 Maximum=10 Default=3
-        RallyGroupRadius = 6,
+        RallyGroupRadius = 10,
     },
     SkillRecoveryJournal = {
         -- The amount of experienced recovered from reading bound journals. Minimum=1 Maximum=100 Default=100
@@ -640,6 +640,6 @@ SandboxVars = {
         -- Toggle off to prevent journals from recovering/transcribing recipes.
         RecoverRecipes = true,
         -- Normally you can reread the journal as many times as you like - with this toggled on each individual XP point can only be recovered once. You can still add onto the journal, but each point can only be recovered once on each journal. Note: the tooltip for the journal will now display a fraction for unused points.
-        RecoveryJournalUsed = true,
+        RecoveryJournalUsed = false,
     },
 }
